@@ -54,7 +54,7 @@ const features = [
 
 export default function WhatWeProvide() {
   return (
-    <section className="py-16 px-8" style={{ background: "#fdf6f3" }}>
+    <section className="py-16 px-8 bg-white" >
       {/* Eyebrow */}
       <div className="text-center mb-3">
         <span className="text-[11px] font-medium tracking-widest uppercase text-gray-400 border border-gray-200 rounded-full px-4 py-1">
@@ -83,13 +83,13 @@ export default function WhatWeProvide() {
               {/* Top row */}
               <div className="flex justify-between items-start mb-3">
                 <p
-                  className="text-[15px] font-bold leading-tight max-w-[120px]"
+                  className="text-[15px] font-bold leading-tight max-w-30"
                   style={{ color: f.titleColor }}
                 >
                   {f.title}
                 </p>
                 <div
-                  className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                  className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
                   style={{ background: f.iconBg }}
                 >
                   <Icon size={18} color={f.iconColor} strokeWidth={2} />
