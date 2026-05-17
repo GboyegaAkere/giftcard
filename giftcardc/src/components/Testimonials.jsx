@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const TESTIMONIALS = [
   {
-    text: "Oncheck saved me from a total disaster. The card I bought was completely drained — the verification caught it before I lost my money. Genuinely impressed.",
+    text: "ValidGifts saved me from a total disaster. The card I bought was completely drained — the verification caught it before I lost my money. Genuinely impressed.",
     name: "Jessica Hartley",
     role: "Online Shopper",
   },
@@ -13,7 +13,7 @@ const TESTIMONIALS = [
     role: "Online Shopper",
   },
   {
-    text: "My Amazon card showed zero balance even though I just bought it. Oncheck confirmed it had already been used. Got my refund thanks to this.",
+    text: "My Amazon card showed zero balance even though I just bought it. ValidGifts confirmed it had already been used. Got my refund thanks to this.",
     name: "Kayla Monroe",
     role: "Online Shopper",
   },
@@ -28,7 +28,7 @@ const TESTIMONIALS = [
     role: "Online Shopper",
   },
   {
-    text: "Got scammed on a Steam card last year. Found Oncheck and now I verify every single one. Hasn't let me down once since I started using it.",
+    text: "Got scammed on a Steam card last year. Found ValidGifts and now I verify every single one. Hasn't let me down once since I started using it.",
     name: "James Caldwell",
     role: "Online Shopper",
   },
@@ -124,10 +124,10 @@ export default function Testimonials() {
               {/* Text */}
               <p className="text-[13px] text-gray-900 leading-[1.7] mb-6">{t.text}</p>
 
-              {/* Author — name + role only, no avatar */}
+              {/* Author */}
               <div className="border-t border-[#f0e8e0] pt-4">
                 <p className="text-[13px] font-semibold text-gray-900">{t.name}</p>
-                <p className="text-[11px] text-gray-900 mt-0.5">{t.role}</p>
+                <p className="text-[11px] text-gray-400 mt-0.5">{t.role}</p>
               </div>
             </div>
           ))}
