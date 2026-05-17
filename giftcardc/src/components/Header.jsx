@@ -27,7 +27,7 @@ export default function Header() {
             </svg>
           </div>
           <span className="text-[17px] font-bold tracking-tight" style={{ color: '#0a0a0a' }}>
-            Oncheck
+            Valid<span style={{ color: '#e8503a' }}>Gifts</span>
           </span>
         </a>
 
