@@ -151,10 +151,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-[12px] text-gray-600">
-            &#169; 2025{" "}
-            <span className="text-[#e8503a]">ValidGifts</span>
-            . All rights reserved.
-          </p>
+  &#169; {new Date().getFullYear()}{" "}
+  <span className="text-[#e8503a]">ValidGifts</span>
+  . All rights reserved.
+</p>
           <div className="flex gap-5">
             {["Privacy", "Terms", "Cookies"].map((l) => (
               
