@@ -177,14 +177,14 @@ export default function Hero() {
 
       {/* CTA */}
       <motion.a
-        href="#"
+        href="#moveToForm"
         initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.7, duration: 0.5 }}
         whileHover={{ scale: 1.04, opacity: 0.88 }}
         whileTap={{ scale: 0.97 }}
         className="flex items-center gap-2.5 bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded-full no-underline z-10"
       >
-        Verify your Card Now
+        Verify your Card
         <span className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
           <span className="text-gray-900 text-[11px] font-bold">→</span>
         </span>

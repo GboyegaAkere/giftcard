@@ -27,7 +27,7 @@ const VALUES = [
 
 export default function AboutUs() {
   return (
-    <section className="py-18 px-8" style={{ background: "#fdf6f3" }}>
+    <section id="about" className="py-18 px-8" style={{ background: "#fdf6f3" }}>
 
       {/* Eyebrow */}
       <div className="text-center mb-3">

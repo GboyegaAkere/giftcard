@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navLinks = ["Home", "About Us", "Gallery", "Community"];
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "#about" },
+  { name: "FAQ", href: "#faq" },
+];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,51 +16,82 @@ export default function Header() {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      style={{ background: '#fff', borderBottom: '1px solid #f3f4f6', width: '100%' }}
+      style={{
+        background: "#fff",
+        borderBottom: "1px solid #f3f4f6",
+        width: "100%",
+      }}
     >
       <div className="max-w-5xl mx-auto px-6 h-15 flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 no-underline">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ background: '#e8503a' }}>
+        <a href="/" className="flex items-center gap-2 no-underline">
+          <div
+            className="w-8 h-8 rounded-lg flex items-center justify-center"
+            style={{ background: "#e8503a" }}
+          >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <rect x="2" y="4" width="12" height="9" rx="1.5" stroke="#fff" strokeWidth="1.5"/>
-              <path d="M2 7h12" stroke="#fff" strokeWidth="1.5"/>
-              <path d="M5 4V3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/>
-              <path d="M11 4V3" stroke="#fff" strokeWidth="1.5" strokeLinecap="round"/>
+              <rect
+                x="2"
+                y="4"
+                width="12"
+                height="9"
+                rx="1.5"
+                stroke="#fff"
+                strokeWidth="1.5"
+              />
+              <path d="M2 7h12" stroke="#fff" strokeWidth="1.5" />
+              <path
+                d="M5 4V3"
+                stroke="#fff"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+              <path
+                d="M11 4V3"
+                stroke="#fff"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
             </svg>
           </div>
-          <span className="text-[17px] font-bold tracking-tight" style={{ color: '#0a0a0a' }}>
-            Valid<span style={{ color: '#e8503a' }}>Gifts</span>
+
+          <span
+            className="text-[17px] font-bold tracking-tight"
+            style={{ color: "#0a0a0a" }}
+          >
+            Valid<span style={{ color: "#e8503a" }}>Gifts</span>
           </span>
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
-            <button
-              key={link}
-              onClick={() => setActive(link)}
-              className={`px-4 py-1.5 text-sm rounded-lg transition-all ${
-                active === link
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setActive(link.name)}
+              className={`px-4 py-1.5 text-sm rounded-lg transition-all no-underline ${
+                active === link.name
                   ? "text-[#e8503a] font-medium"
                   : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
               }`}
             >
-              {link}
-            </button>
+              {link.name}
+            </a>
           ))}
         </nav>
 
         {/* CTA */}
         <div className="hidden md:flex items-center">
           <motion.a
-            href="#"
+            href="#moveToForm"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             className="flex items-center gap-2 bg-gray-900 text-white text-[13px] font-medium px-4 py-2 rounded-full no-underline"
           >
             Verify Card
+
             <span className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
               <span className="text-gray-900 text-[10px] font-bold">→</span>
             </span>
@@ -83,11 +118,23 @@ export default function Header() {
           >
             <div className="px-4 py-3 flex flex-col gap-1">
               {navLinks.map((link) => (
-                <button key={link} className="text-left px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg">
-                  {link}
-                </button>
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => {
+                    setActive(link.name);
+                    setMenuOpen(false);
+                  }}
+                  className="text-left px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg no-underline"
+                >
+                  {link.name}
+                </a>
               ))}
-              <a href="#" className="mt-2 flex items-center justify-center gap-2 bg-gray-900 text-white text-sm font-medium px-4 py-2.5 rounded-full">
+
+              <a
+                href="#moveToForm"
+                className="mt-2 flex items-center justify-center gap-2 bg-gray-900 text-white text-sm font-medium px-4 py-2.5 rounded-full"
+              >
                 Verify Card <span>→</span>
               </a>
             </div>

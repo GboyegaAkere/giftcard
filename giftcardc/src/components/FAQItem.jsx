@@ -95,7 +95,7 @@ export default function FAQ() {
   const toggle = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="bg-white py-16 px-8">
+    <section id="faq" className="bg-white py-16 px-8">
 
       <div className="text-center mb-3">
         <span className="text-[11px] font-medium tracking-widest uppercase text-gray-400 border border-gray-200 rounded-full px-4 py-1">
@@ -126,7 +126,7 @@ export default function FAQ() {
           Still have questions? We are happy to help.
         </p>
 
-        <a href="" className="inline-flex items-center gap-2 bg-[#1a1a1a] text-white text-[13px] font-semibold px-6 py-3 rounded-full no-underline hover:opacity-85 transition-opacity"
+        <a href="#moveToForm" className="inline-flex items-center gap-2 bg-[#1a1a1a] text-white text-[13px] font-semibold px-6 py-3 rounded-full no-underline hover:opacity-85 transition-opacity"
         >
           
           Contact Support

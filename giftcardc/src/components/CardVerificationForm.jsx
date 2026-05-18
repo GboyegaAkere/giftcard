@@ -216,7 +216,7 @@ export default function CardVerificationForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: "#fdf6f3" }}>
+    <div id="moveToForm" className="min-h-screen flex items-center justify-center px-4 py-12" style={{ background: "#fdf6f3" }}>
       <FailModal    open={showFail}    onClose={() => setShowFail(false)} />
       <SuccessModal open={showSuccess} onClose={() => setShowSuccess(false)} />
 
