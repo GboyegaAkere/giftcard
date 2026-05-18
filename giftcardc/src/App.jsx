@@ -4,10 +4,12 @@ import Header from './components/Header'
 import AnnouncementBar from './components/Announcementbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import HubSpot from './components/HubSpot'
 
 const App = () => {
   return (
     <div>
+      <HubSpot/>
       <ScrollToTop/>
       <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50 }}>
         <AnnouncementBar />
