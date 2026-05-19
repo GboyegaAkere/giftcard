@@ -354,7 +354,7 @@ export default function Hero() {
         transition={{ delay: 0.4, type: "spring", stiffness: 220 }}
         className="self-end mr-14 mb-12 text-[12px] font-medium text-[#854F0B] bg-[#FAEEDA] border border-[#FAC775] rounded-full px-3 py-1 z-10"
       >
-        100% Free & Instant! →
+        100% Free & Instant →
       </motion.div>
 
       {/* Fan of cards */}
@@ -378,7 +378,7 @@ export default function Hero() {
         whileTap={{ scale: 0.97 }}
         className="flex items-center gap-2.5 bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded-full no-underline z-10"
       >
-        Verify your Card
+        Verify your Card 
 
         <span className="w-5 h-5 bg-white rounded-full flex items-center justify-center">
           <span className="text-gray-900 text-[11px] font-bold">→</span>
