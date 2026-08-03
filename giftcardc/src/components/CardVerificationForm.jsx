@@ -13,7 +13,7 @@ const CARD_BRANDS = [
   "Amazon","Amex","TT Visa","Visa Silvery White","Walmart Visa",
   "Vanilla Visa","MasterCard","Nike","eBay","Steam","Apple iTunes",
   "Google Play","American Express","US PSN","Razer Gold","Spotify",
-  "Nordstrom","Sephora","Hulu","Visa Gift","US Paramount+",
+  "Nordstrom","Sephora","Hulu","Visa Gift","US Paramount+","Xbox","Joker"
 ];
 
 const CURRENCIES   = ["USD","EUR","BTC","GBP","CAD","CNY","JPY"];
